@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "d6a6adc6-be04-46cd-afec-e7e8316d4cca",
+		"name": "elipsonic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20205268"
+	},
+	"item": [
+		{
+			"name": "Add Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  {\r\n    \"employee_id\": 5,\r\n    \"first_name\": \"dea\",\r\n    \"last_name\": \"pen\",\r\n    \"city\": \"bangalore\", \r\n    \"email\": \"m@mail.com\",\r\n    \"phone_number\": \"123123\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/core/add_employee",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"core",
+						"add_employee"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  {\r\n    \"employee_id\": 2,\r\n    \"first_name\": \"den\",\r\n    \"last_name\": \"das\",\r\n    \"city\": \"bangalore\", \r\n    \"email\": \"m@mail.com\",\r\n    \"phone_number\": \"123123\"\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/core/edit_employee_data",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"core",
+						"edit_employee_data"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get List of employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/core/employee_list?page_size=10&page=1&search_query&city_query",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"core",
+						"employee_list"
+					],
+					"query": [
+						{
+							"key": "page_size",
+							"value": "10"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "search_query",
+							"value": null
+						},
+						{
+							"key": "city_query",
+							"value": null
+						},
+						{
+							"key": "employee",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get count",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/core/employee_count",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"core",
+						"employee_count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/core/delete_employee/?employee_id=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"core",
+						"delete_employee",
+						""
+					],
+					"query": [
+						{
+							"key": "employee_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
